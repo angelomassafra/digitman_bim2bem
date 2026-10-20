@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.idf text eol=crlf
+*.epw text eol=crlf
+*.ifc -text
+*.brep -text
+*.xlsx binary
+*.png binary
+*.pdf binary

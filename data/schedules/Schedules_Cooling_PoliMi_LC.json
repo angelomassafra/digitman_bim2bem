@@ -1,0 +1,129 @@
+{
+    "type": "ScheduleRuleset",
+    "identifier": "ClnSch_AHU",
+    "display_name": "Cooling Schedule AHU",
+    "day_schedules": [
+        {
+            "type": "ScheduleDay",
+            "identifier": "ClnSch_AHU",
+            "display_name": "Cooling Schedule AHU",
+            "values": [
+                0,
+                1,
+                0
+            ],
+            "times": [
+                [
+                    0,
+                    0
+                ],
+                [
+                    7,
+                    0
+                ],
+                [
+                    18,
+                    0
+                ]
+            ],
+            "interpolate": false
+        },
+        {
+            "type": "ScheduleDay",
+            "identifier": "ClnSch_Off",
+            "display_name": "Cooling Schedule Off",
+            "values": [
+                0,
+                0,
+                0
+            ],
+            "times": [
+                [
+                    0,
+                    0
+                ],
+                [
+                    7,
+                    0
+                ],
+                [
+                    18,
+                    0
+                ]
+            ],
+            "interpolate": false
+        }
+    ],
+    "default_day_schedule": "ClnSch_AHU",
+    "schedule_rules": [
+        {
+            "type": "ScheduleRuleAbridged",
+            "schedule_day": "ClnSch_Off",
+            "apply_sunday": false,
+            "apply_monday": true,
+            "apply_tuesday": true,
+            "apply_wednesday": true,
+            "apply_thursday": true,
+            "apply_friday": true,
+            "apply_saturday": false,
+            "start_date": [
+                1,
+                1
+            ],
+            "end_date": [
+                4,
+                16
+            ]
+        },
+        {
+            "type": "ScheduleRuleAbridged",
+            "schedule_day": "ClnSch_AHU",
+            "apply_sunday": false,
+            "apply_monday": true,
+            "apply_tuesday": true,
+            "apply_wednesday": true,
+            "apply_thursday": true,
+            "apply_friday": true,
+            "apply_saturday": false,
+            "start_date": [
+                4,
+                16
+            ],
+            "end_date": [
+                10,
+                14
+            ]
+        },
+        {
+            "type": "ScheduleRuleAbridged",
+            "schedule_day": "ClnSch_Off",
+            "apply_sunday": false,
+            "apply_monday": true,
+            "apply_tuesday": true,
+            "apply_wednesday": true,
+            "apply_thursday": true,
+            "apply_friday": true,
+            "apply_saturday": false,
+            "start_date": [
+                10,
+                14
+            ],
+            "end_date": [
+                12,
+                31
+            ]
+        }
+    ],
+    "schedule_type_limit": {
+        "type": "ScheduleTypeLimit",
+        "identifier": "Fractional",
+        "display_name": "Fractional",
+        "lower_limit": 0,
+        "upper_limit": 1,
+        "numeric_type": "Continuous",
+        "unit_type": "Dimensionless"
+    },
+    "holiday_schedule": "ClnSch_AHU",
+    "summer_designday_schedule": "ClnSch_AHU",
+    "winter_designday_schedule": "ClnSch_AHU"
+}

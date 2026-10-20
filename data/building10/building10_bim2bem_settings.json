@@ -1,0 +1,63 @@
+{
+  "_description": "BIM-to-BEM settings of Building 10 (LCF0407), used by scripts/01_bim_to_bem.py",
+  "thermal_zoning": {
+    "n_clusters": 6,
+    "kmeans_property_names": [
+      "UID",
+      "pr_IsOccupied",
+      "pr_IsHeated",
+      "pr_IsCooled",
+      "pr_OccupancyDensityOperation"
+    ],
+    "single_zone_occupancy_types": [
+      "EducationandTrainingSpaces:LectureHall(FixedSeats)",
+      "EducationandTrainingSpaces:Research/Non-ClassClassLaboratory",
+      "StorageSpaces:GeneralStorageSpace"
+    ],
+    "excluded_cell_uids": [
+      "Cell29",
+      "Cell25",
+      "Cell24",
+      "Cell23",
+      "Cell22",
+      "Cell3"
+    ],
+    "fill_missing_space_properties": false,
+    "unzoned_cells_as_separate_zones": false
+  },
+  "infiltration": {
+    "building_airtightness": "TightBuilding"
+  },
+  "energyplus": {
+    "north_axis_deg": 45,
+    "terrain": "City",
+    "default_wall_construction": "WL_POLIMI-LC_EW02",
+    "default_roof_construction": "RF_POLIMI-LC_IH-E"
+  },
+  "boundary_conditions": {
+    "adiabatic_face_uids": [
+      "extVerFace8",
+      "extVerFace9",
+      "extVerFace10",
+      "extVerFace11",
+      "extVerFace12",
+      "extVerFace13",
+      "extVerFace14"
+    ],
+    "ground_face_uids": []
+  },
+  "fenestration_with_external_blinds": [
+    "curtainWall-extVerFace27",
+    "curtainWall-extVerFace38",
+    "curtainWall-extVerFace6",
+    "window26-996e4d79-fbd8-11ee-97a5-e5395e86ca20"
+  ],
+  "missing_curtain_walls": [
+    {
+      "name": "curtainWall-extVerFace61",
+      "copy_of": "curtainWall-extVerFace38",
+      "host_surface": "extVerFace61-zone19",
+      "z_offset_m": -5.12
+    }
+  ]
+}

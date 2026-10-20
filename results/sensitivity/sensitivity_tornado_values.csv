@@ -1,0 +1,37 @@
+building,kpi,assumption,categorical,low_pct,high_pct
+building09,energy_need_TOE,Occupancy level 25% / 100% of booked hours,False,-2.3946084112700494,0.6067426814026833
+building09,energy_need_TOE,Equipment density 2.7 / 8.1 W/m²,False,-1.9187857778754536,1.9965662087989555
+building09,energy_need_TOE,Outdoor air per floor area −20% / +20%,False,-9.23042465685323,9.56546927598696
+building09,energy_need_TOE,Ventilation: CAV-person (S1),True,0.0,0.003379202251574398
+building09,energy_need_TOE,Ventilation: VAV-person (S2),True,0.0,-34.05988377609168
+building09,energy_need_TOE,Space use: closed offices (S9),True,0.0,-0.558366804771615
+building09,cost_EUR,Occupancy level 25% / 100% of booked hours,False,-4.716156333154775,3.69762501405575
+building09,cost_EUR,Equipment density 2.7 / 8.1 W/m²,False,-3.3480649951282415,3.406297830756899
+building09,cost_EUR,Outdoor air per floor area −20% / +20%,False,-6.156028488072773,6.463765710348257
+building09,cost_EUR,Ventilation: CAV-person (S1),True,0.0,-0.06401805919181713
+building09,cost_EUR,Ventilation: VAV-person (S2),True,0.0,-23.16108572001451
+building09,cost_EUR,Space use: closed offices (S9),True,0.0,-0.4743604022313219
+building09,co2_emissions_kgCO2eq,Occupancy level 25% / 100% of booked hours,False,-4.1266442975293804,2.912755436898129
+building09,co2_emissions_kgCO2eq,Equipment density 2.7 / 8.1 W/m²,False,-2.985127278918731,3.0483238469714458
+building09,co2_emissions_kgCO2eq,Outdoor air per floor area −20% / +20%,False,-6.936711723896427,7.251383129592304
+building09,co2_emissions_kgCO2eq,Ventilation: CAV-person (S1),True,0.0,-0.046903832767897224
+building09,co2_emissions_kgCO2eq,Ventilation: VAV-person (S2),True,0.0,-25.928623950580953
+building09,co2_emissions_kgCO2eq,Space use: closed offices (S9),True,0.0,-0.4956921976684292
+building10,energy_need_TOE,Occupancy level 25% / 100% of booked hours,False,0.7439079390137993,2.5198719047397455
+building10,energy_need_TOE,Equipment density 2.7 / 8.1 W/m²,False,-0.3253364334839248,0.3275691915615164
+building10,energy_need_TOE,Outdoor air per floor area −20% / +20%,False,-5.675918829034476,5.903962563028253
+building10,energy_need_TOE,Ventilation: CAV-person (S1),True,0.0,29.433330543117965
+building10,energy_need_TOE,Ventilation: VAV-person (S2),True,0.0,-16.83850614389063
+building10,energy_need_TOE,Space use: closed offices (S9),True,0.0,2.7474157967902757
+building10,cost_EUR,Occupancy level 25% / 100% of booked hours,False,0.8764387829534703,9.04763082271689
+building10,cost_EUR,Equipment density 2.7 / 8.1 W/m²,False,-0.6227432617351591,0.6241778729433101
+building10,cost_EUR,Outdoor air per floor area −20% / +20%,False,-3.711235957725334,3.876772791171046
+building10,cost_EUR,Ventilation: CAV-person (S1),True,0.0,19.08171236726237
+building10,cost_EUR,Ventilation: VAV-person (S2),True,0.0,-11.390452011252862
+building10,cost_EUR,Space use: closed offices (S9),True,0.0,4.95663151981296
+building10,co2_emissions_kgCO2eq,Occupancy level 25% / 100% of booked hours,False,0.8393509894440765,7.220884929971083
+building10,co2_emissions_kgCO2eq,Equipment density 2.7 / 8.1 W/m²,False,-0.5395161222514488,0.5411740890604699
+building10,co2_emissions_kgCO2eq,Outdoor air per floor area −20% / +20%,False,-4.261038180939824,4.444067116235373
+building10,co2_emissions_kgCO2eq,Ventilation: CAV-person (S1),True,0.0,21.978537483450467
+building10,co2_emissions_kgCO2eq,Ventilation: VAV-person (S2),True,0.0,-12.915050366569714
+building10,co2_emissions_kgCO2eq,Space use: closed offices (S9),True,0.0,4.338398555187517

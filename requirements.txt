@@ -1,0 +1,31 @@
+# Python 3.11 (tested on Windows 11 with EnergyPlus 24.2)
+# Versions verified to reproduce the models of the paper (see README, "Reproducibility")
+
+# Topological BIM and BIM-to-BEM
+topologicpy==0.8.15
+topologic_core==8.0.4
+ifcopenshell==0.8.3.post2
+honeybee-core==1.64.76
+honeybee-energy==1.126.4
+ladybug-core==0.44.62
+ladybug-geometry==1.35.6
+eppy==0.5.63
+# 1.2.2 reproduces the K-Means thermal zoning of the paper (later versions number the clusters differently)
+scikit-learn==1.2.2
+numpy==1.26.4
+pandas==2.2.3
+openpyxl==3.1.5
+
+# Knowledge graph and dashboard
+networkx==3.6.1
+neo4j==6.4.1
+plotly==6.2.0
+dash==3.3.0
+dash-daq==0.6.0
+dash-bootstrap-components==2.0.4
+pillow==13.0.0
+
+# Figures and notebooks
+matplotlib==3.11.2
+jupytext==1.19.6
+ipykernel

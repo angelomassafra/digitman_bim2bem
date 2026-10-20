@@ -1,0 +1,86 @@
+{
+  "_description": "BIM-to-BEM settings of Building 09 (LCF0406), used by scripts/01_bim_to_bem.py",
+  "thermal_zoning": {
+    "n_clusters": 6,
+    "kmeans_property_names": [
+      "UID",
+      "pr_IsOccupied",
+      "pr_IsHeated",
+      "pr_IsCooled",
+      "pr_OccupancyDensityOperation"
+    ],
+    "single_zone_occupancy_types": [
+      "EducationandTrainingSpaces:LectureHall(FixedSeats)",
+      "EducationandTrainingSpaces:Research/Non-ClassClassLaboratory",
+      "StorageSpaces:GeneralStorageSpace"
+    ],
+    "excluded_cell_uids": [
+      "Cell59",
+      "Cell115",
+      "Cell116",
+      "Cell117",
+      "Cell118",
+      "Cell153",
+      "Cell119",
+      "Cell120",
+      "Cell121",
+      "Cell122",
+      "Cell123",
+      "Cell124",
+      "Cell125"
+    ],
+    "fill_missing_space_properties": true,
+    "unzoned_cells_as_separate_zones": true
+  },
+  "infiltration": {
+    "building_airtightness": "TightBuilding"
+  },
+  "energyplus": {
+    "north_axis_deg": 45,
+    "terrain": "City",
+    "default_wall_construction": "WL_POLIMI-LC_EW02",
+    "default_roof_construction": "RF_POLIMI-LC_IH-E"
+  },
+  "boundary_conditions": {
+    "adiabatic_face_uids": [
+      "extVerFace13",
+      "extVerFace14",
+      "extVerFace140",
+      "extVerFace142",
+      "extVerFace143"
+    ],
+    "ground_face_uids": [
+      "extVerFace110",
+      "extVerFace109",
+      "extVerFace191",
+      "extVerFace192",
+      "extVerFace190",
+      "extVerFace189",
+      "extVerFace187",
+      "extVerFace186",
+      "extVerFace183",
+      "extVerFace180",
+      "extVerFace178",
+      "extVerFace177",
+      "extVerFace176",
+      "extVerFace175",
+      "extVerFace107",
+      "extVerFace139",
+      "extVerFace111"
+    ]
+  },
+  "fenestration_with_external_blinds": [
+    "curtainWall-extVerFace62",
+    "curtainWall-extVerFace118",
+    "curtainWall-extVerFace197",
+    "curtainWall-extVerFace201",
+    "curtainWall-extVerFace121",
+    "curtainWall-extVerFace65",
+    "curtainWall-extVerFace66",
+    "curtainWall-extVerFace166",
+    "curtainWall-extVerFace73",
+    "curtainWall-extVerFace124",
+    "curtainWall-extVerFace70"
+  ],
+  "missing_curtain_walls": []
+}

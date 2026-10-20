@@ -1,0 +1,153 @@
+{
+  "_description": "Calibration (tuning) edits applied to the baseline BEM of building10 by scripts/02_bem_calibration.py",
+  "timesteps_per_hour": 4,
+  "setpoint_schedules": {
+    "Generic room Heating": [
+      "Through: 12/31",
+      "For: AllDays",
+      "Until: 7:00",
+      "18",
+      "Until: 18:00",
+      "22",
+      "Until: 24:00",
+      "18"
+    ],
+    "Generic room Cooling": [
+      "Through: 12/31",
+      "For: AllDays",
+      "Until: 7:00",
+      "22",
+      "Until: 18:00",
+      "22",
+      "Until: 24:00",
+      "22"
+    ]
+  },
+  "modified_schedules": {
+    "LghSch_Costant": [
+      "Through: 12/31",
+      "For: AllDays",
+      "Until: 07:00",
+      "0",
+      "Until: 18:00",
+      "1",
+      "Until: 24:00",
+      "0"
+    ],
+    "HtnSch_AHU": [
+      "Through: 4/15",
+      "For: AllDays",
+      "Until: 7:00",
+      "1",
+      "Until: 18:00",
+      "1",
+      "Until: 24:00",
+      "1",
+      "Through: 12/31",
+      "For: AllDays",
+      "Until: 7:00",
+      "1",
+      "Until: 18:00",
+      "1",
+      "Until: 24:00",
+      "1"
+    ],
+    "ClnSch_AHU": [
+      "Through: 4/16",
+      "For: AllDays",
+      "Until: 24:00",
+      "1",
+      "Through: 10/14",
+      "For: AllDays",
+      "Until: 7:00",
+      "1",
+      "Until: 18:00",
+      "1",
+      "Until: 24:00",
+      "1",
+      "Through: 12/31",
+      "For: AllDays",
+      "Until: 24:00",
+      "1"
+    ],
+    "VntSch_AHU": [
+      "Through: 12/31",
+      "For: AllDays",
+      "Until: 7:00",
+      "1",
+      "Until: 18:00",
+      "1",
+      "Until: 24:00",
+      "1"
+    ]
+  },
+  "electric_equipment_power_density_w_m2": {
+    "10.0": [
+      "zone18",
+      "zone15",
+      "zone16",
+      "zone19"
+    ],
+    "2.0": [
+      "zone06",
+      "zone01",
+      "zone17",
+      "zone04",
+      "zone03",
+      "zone00"
+    ]
+  },
+  "outdoor_air_method": "Flow/Area",
+  "external_blind_properties": {
+    "Slat_Width": 0.7,
+    "Slat_Separation": 0.7,
+    "Slat_Thickness": 0.06,
+    "Front_Side_Slat_Beam_Solar_Reflectance": 0.9,
+    "Back_Side_Slat_Beam_Solar_Reflectance": 0.9,
+    "Front_Side_Slat_Diffuse_Solar_Reflectance": 0.9,
+    "Back_Side_Slat_Diffuse_Solar_Reflectance": 0.9,
+    "Front_Side_Slat_Beam_Visible_Reflectance": 0.9,
+    "Back_Side_Slat_Beam_Visible_Reflectance": 0.9,
+    "Front_Side_Slat_Diffuse_Visible_Reflectance": 0.9,
+    "Back_Side_Slat_Diffuse_Visible_Reflectance": 0.9,
+    "Blind_to_Glass_Distance": 0.9
+  },
+  "output_variables": [
+    "Zone Ideal Loads Supply Air Total Cooling Energy",
+    "Zone Ideal Loads Zone Total Heating Energy",
+    "Zone Ideal Loads Zone Total Cooling Energy",
+    "Zone Electric Equipment Electricity Energy",
+    "Zone Lights Electricity Energy",
+    "Air System Fan Electric Energy",
+    "Zone People Occupant Count",
+    "Zone Mean Air Temperature",
+    "Zone Air Temperature",
+    "Zone Mean Radiant Temperature",
+    "Zone Operative Temperature",
+    "Zone Ideal Loads Supply Air Total Heating Energy",
+    "Zone Ideal Loads Supply Air Sensible Heating Energy",
+    "Zone Ideal Loads Supply Air Latent Heating Energy",
+    "Zone Ideal Loads Supply Air Total Cooling Energy",
+    "Zone Ideal Loads Supply Air Sensible Cooling Energy",
+    "Zone Ideal Loads Supply Air Latent Cooling Energy",
+    "Zone Ideal Loads Outdoor Air Sensible Heating Energy",
+    "Zone Ideal Loads Outdoor Air Latent Heating Energy",
+    "Zone Ideal Loads Outdoor Air Total Heating Energy",
+    "Zone Ideal Loads Outdoor Air Sensible Cooling Energy",
+    "Zone Ideal Loads Outdoor Air Total Cooling Energy",
+    "Zone Total Internal Total Heating Energy",
+    "Zone Air System Sensible Heating Energy",
+    "Zone Ideal Loads Outdoor Air Sensible Heating Energy",
+    "Zone Ideal Loads Outdoor Air Latent Heating Energy",
+    "Zone Ideal Loads Outdoor Air Total Heating Energy",
+    "Zone Ideal Loads Zone Sensible Heating Energy",
+    "Zone Ideal Loads Zone Sensible Cooling Energy",
+    "Zone Ideal Loads Zone Latent Heating Energy",
+    "Zone Ideal Loads Zone Latent Cooling Energy",
+    "Zone Ideal Loads Zone Total Heating Energy",
+    "Zone Ideal Loads Outdoor Air Mass Flow Rate",
+    "Zone Ideal Loads Outdoor Air Standard Density Volume",
+    "Zone Ideal Loads Supply Air Mass Flow Rate",
+    "Zone Ideal Loads Supply Air Standard Density Volume Flow Rate"
+  ]
+}

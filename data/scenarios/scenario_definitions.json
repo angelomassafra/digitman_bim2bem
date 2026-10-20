@@ -1,0 +1,89 @@
+{
+  "_description": "What-if scenarios of the case study (Section 3.3.2); implemented by scripts/04_scenario_modelling.py",
+  "scenarios": [
+    {
+      "uid": "scenario0",
+      "label": "S0",
+      "name": "Current state",
+      "category": "CAV",
+      "description": "Baseline (2024): lecture halls with constant air volume (CAV) systems controlled by volume flow (outdoor air per floor area)."
+    },
+    {
+      "uid": "scenario1",
+      "label": "S1",
+      "name": "Classrooms CAV-person",
+      "category": "CAV",
+      "description": "As Scenario 0, but the CAV systems of the classrooms are controlled on the airflow per person."
+    },
+    {
+      "uid": "scenario2",
+      "label": "S2",
+      "name": "Classrooms VAV-person",
+      "category": "VAV",
+      "description": "Variable air volume (VAV) systems in the classrooms modulating the airflow per person on the occupancy schedule, with a minimum flow (0.15 L/s m2) when unoccupied."
+    },
+    {
+      "uid": "scenario3",
+      "label": "S3",
+      "name": "Classrooms +20% capacity",
+      "category": "Capacity",
+      "description": "Classroom seating capacity (people per floor area) increased by 20%."
+    },
+    {
+      "uid": "scenario4",
+      "label": "S4",
+      "name": "Classrooms -20% capacity",
+      "category": "Capacity",
+      "description": "Classroom seating capacity (people per floor area) reduced by 20%."
+    },
+    {
+      "uid": "scenario5",
+      "label": "S5",
+      "name": "Classrooms fully occupied",
+      "category": "Schedule",
+      "description": "Classrooms 100% occupied during all their booked hours; classroom equipment follows the occupancy schedule."
+    },
+    {
+      "uid": "scenario6",
+      "label": "S6",
+      "name": "Classrooms half occupied",
+      "category": "Schedule",
+      "description": "Classrooms 50% occupied during all their booked hours; classroom equipment follows the occupancy schedule."
+    },
+    {
+      "uid": "scenario7",
+      "label": "S7",
+      "name": "Classrooms 75% occupied",
+      "category": "Schedule",
+      "description": "Classrooms 75% occupied during all their booked hours; classroom equipment follows the occupancy schedule."
+    },
+    {
+      "uid": "scenario8",
+      "label": "S8",
+      "name": "Classrooms 25% occupied",
+      "category": "Schedule",
+      "description": "Classrooms 25% occupied during all their booked hours; classroom equipment follows the occupancy schedule."
+    },
+    {
+      "uid": "scenario9",
+      "label": "S9",
+      "name": "Closed offices CAV-volume",
+      "category": "Repurposing",
+      "description": "Classrooms repurposed as closed offices (0.12 people/m2, 8.1 W/m2 equipment, generic office schedule) with CAV systems controlled by volume flow."
+    },
+    {
+      "uid": "scenario10",
+      "label": "S10",
+      "name": "Closed offices CAV-person",
+      "category": "Repurposing",
+      "description": "As Scenario 9, with CAV systems controlled on the airflow per person."
+    },
+    {
+      "uid": "scenario11",
+      "label": "S11",
+      "name": "Closed offices VAV-person",
+      "category": "Repurposing",
+      "description": "As Scenario 9, with VAV systems modulating the airflow per person on the office occupancy schedule (minimum flow when unoccupied)."
+    }
+  ]
+}

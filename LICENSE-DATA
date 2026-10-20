@@ -1,0 +1,10 @@
+The data and models in the data/, models/, results/ and figures/ folders are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+Copyright (c) 2026 Angelo Massafra, Roberto Villa, Graziano Salvalai, Riccardo Gulli, Marco D'Orazio.
+Case study: Lecco Campus, Politecnico di Milano. Work funded by the European Union - Next Generation EU,
+Mission 4 Component 1, PRIN 2022 DIGITMAN (ID 2022JMRX2A, CUP D53D23003630006).
+
+The EnergyPlus weather file in data/weather/ITA_LM_Grigna.Settentrion.160700_TMYx.ddy is distributed by
+climate.onebuilding.org under its own terms.

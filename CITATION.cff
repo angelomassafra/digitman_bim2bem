@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Topology-Driven BIM-to-BEM for Occupancy-Based Energy Scenario Analysis in Higher-Education Buildings: code and data"
+authors:
+  - family-names: Massafra
+    given-names: Angelo
+    affiliation: "Department of Architecture, Alma Mater Studiorum – University of Bologna"
+  - family-names: Villa
+    given-names: Roberto
+    affiliation: "Department of Architecture, Built Environment and Construction Engineering, Politecnico di Milano"
+  - family-names: Salvalai
+    given-names: Graziano
+    affiliation: "Department of Architecture, Built Environment and Construction Engineering, Politecnico di Milano"
+  - family-names: Gulli
+    given-names: Riccardo
+    affiliation: "Department of Architecture, Alma Mater Studiorum – University of Bologna"
+  - family-names: D'Orazio
+    given-names: Marco
+    affiliation: "Department of Civil and Building Engineering and Architecture, Università Politecnica delle Marche"
+license: MIT
+keywords: [Topological BIM, BIM-to-BEM, EnergyPlus, Honeybee, occupancy, scenario analysis, knowledge graph, digital twin]
+preferred-citation:
+  type: article
+  title: "Topology-Driven BIM-to-BEM for Occupancy-Based Energy Scenario Analysis in Higher-Education Buildings"
+  authors:
+    - family-names: Massafra
+      given-names: Angelo
+    - family-names: Villa
+      given-names: Roberto
+    - family-names: Salvalai
+      given-names: Graziano
+    - family-names: Gulli
+      given-names: Riccardo
+    - family-names: D'Orazio
+      given-names: Marco
+  status: submitted
