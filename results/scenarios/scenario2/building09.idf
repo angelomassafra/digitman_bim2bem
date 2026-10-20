@@ -13,7 +13,7 @@ SimulationControl,
     ;                         !- Maximum Number of HVAC Sizing Simulation Passes
 
 Building,
-    edificio09,               !- Name
+    building09,               !- Name
     45,                       !- North Axis
     City,                     !- Terrain
     ,                         !- Loads Convergence Tolerance Value

@@ -11,7 +11,7 @@ SimulationControl,
     Yes;                      !- Run Simulation for Weather File Run Periods
 
 Building,
-    edificio09,               !- Name
+    building09,               !- Name
     45,                       !- North Axis
     City,                     !- Terrain
     ,                         !- Loads Convergence Tolerance Value

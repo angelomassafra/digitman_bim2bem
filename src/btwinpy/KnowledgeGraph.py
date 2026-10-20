@@ -885,15 +885,15 @@ class KnowledgeGraph():
     ):
         """
         Writes the graph to a Neo4j database, replacing its content. The connection parameters
-        default to the NEO4J_URI, NEO4J_USERNAME and NEO4J_PASSWORD environment variables.
+        that are not given are asked to the user at run time (the password without echo).
         """
         # Import libraries
-        import os
+        from getpass import getpass
         from neo4j import GraphDatabase
 
-        NEO4J_URI = NEO4J_URI or os.environ['NEO4J_URI']
-        NEO4J_USERNAME = NEO4J_USERNAME or os.environ.get('NEO4J_USERNAME', 'neo4j')
-        NEO4J_PASSWORD = NEO4J_PASSWORD or os.environ['NEO4J_PASSWORD']
+        NEO4J_URI = NEO4J_URI or input('Neo4j URI (e.g. neo4j+s://<instance>.databases.neo4j.io): ').strip()
+        NEO4J_USERNAME = NEO4J_USERNAME or input('Neo4j username [neo4j]: ').strip() or 'neo4j'
+        NEO4J_PASSWORD = NEO4J_PASSWORD or getpass('Neo4j password: ')
 
         # Open connection
         driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USERNAME, NEO4J_PASSWORD))

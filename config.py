@@ -70,8 +70,8 @@ SITE = {'portfolio': ('SK001', 'POLIMI'), 'region': ('LCF', 'Lecco'), 'site': ('
 
 # Asset codes of the university portfolio (used as building UIDs in the knowledge graph)
 BUILDINGS = {
-    'building09': {'uid': 'LCF0406', 'name': 'Building 09', 'idf_name': 'edificio09'},
-    'building10': {'uid': 'LCF0407', 'name': 'Building 10', 'idf_name': 'edificio10'},
+    'building09': {'uid': 'LCF0406', 'name': 'Building 09', 'idf_name': 'building09'},
+    'building10': {'uid': 'LCF0407', 'name': 'Building 10', 'idf_name': 'building10'},
 }
 
 # Monitored classrooms used for the BEM calibration (Section 4.2): EnergyPlus zone of the

@@ -115,7 +115,7 @@ if RUN_SIMULATIONS:
 # %%
 rows = []
 for building in config.BUILDINGS:
-    ahu_power = pd.read_excel(config.building_file(building, 'ahu_electrical_power.xlsx'), 'PotenzeElettricheUTA')
+    ahu_power = pd.read_excel(config.building_file(building, 'ahu_electrical_power.xlsx'), 'ahu_rated_power')
     for variant in VARIANTS:
         run = config.SENSITIVITY_RESULTS_DIR / variant / building
         kpis = KPI.BuildingKPIsByEnergyPlusResults(csvFilePath=f'{run}.csv', eioFilePath=f'{run}.eio', ahuElectricalPower=ahu_power)

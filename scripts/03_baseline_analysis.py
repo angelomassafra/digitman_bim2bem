@@ -54,7 +54,7 @@ name = config.BUILDINGS[BUILDING]['name']
 
 # %%
 net_floor_area = KPI.NetFloorAreaByIFC(str(config.building_file(BUILDING, 'tbim_ifc_design_transfer_view.ifc')))
-ahu_power = pd.read_excel(config.building_file(BUILDING, 'ahu_electrical_power.xlsx'), 'PotenzeElettricheUTA')
+ahu_power = pd.read_excel(config.building_file(BUILDING, 'ahu_electrical_power.xlsx'), 'ahu_rated_power')
 kpis = KPI.BuildingKPIsByEnergyPlusResults(csvFilePath=f'{run}.csv', eioFilePath=f'{run}.eio', ahuElectricalPower=ahu_power)
 
 END_USES = {'heat': 'Heating', 'cool': 'Cooling', 'vent': 'Ventilation', 'light': 'Lighting', 'equip': 'Equipment'}

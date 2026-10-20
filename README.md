@@ -73,8 +73,9 @@ Each step is available both as a Python script (`scripts/`) and as a Jupyter not
    folder is `C:\EnergyPlusV24-2-0`; otherwise set `ENERGYPLUS_DIR` in a `.env` file (see `.env.example`).
    The BEMs are written for EnergyPlus 24.1, as in the paper, and converted to 24.2 with the
    transition program shipped with EnergyPlus 24.2.
-3. *(Optional)* a Neo4j database: set `NEO4J_URI`, `NEO4J_USERNAME` and `NEO4J_PASSWORD` in `.env`
-   to write the knowledge graph to Neo4j.
+3. *(Optional)* a Neo4j database, to which `08_knowledge_graph` writes the knowledge graph when
+   run with `--neo4j yes` (or when answering *y* to its prompt). The connection URI, username and
+   password are asked at run time and are not stored.
 
 ## Usage
 
@@ -137,6 +138,12 @@ from the architectural CAD drawings and space inventory, construction properties
 sheets, HVAC schedules and AHU electrical power, occupancy schedules from the university booking
 service, hourly indoor air temperatures of two monitored classrooms (A1.3, Building 10; B1.5,
 Building 09) and the weather data of the on-site station for 2024.
+
+The IFC files were exported from an Italian-language Revit installation: the Revit property sets
+and property names (e.g. pset `Altro` = *Other*, property `Nome` = *Name*) and the material names
+inherited from the BIM (e.g. *Solaio laterocemento* = hollow-tile concrete slab) are kept as in
+the source data, since the workflow uses them as keys. Identifiers such as `EqpSch_Costant` keep
+the original spelling of the models for the same reason.
 
 ## License
 

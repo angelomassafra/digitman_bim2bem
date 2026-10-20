@@ -7205,7 +7205,7 @@
                     },
                     "nominalValue": {
                         "@type": null,
-                        "value": 304617.3937599041,
+                        "value": 304617.393759904,
                         "unit": "EUR"
                     }
                 },
@@ -7230,7 +7230,7 @@
                     },
                     "nominalValue": {
                         "@type": null,
-                        "value": 34.069666676886115,
+                        "value": 34.06966667688611,
                         "unit": "EUR/mq"
                     }
                 },

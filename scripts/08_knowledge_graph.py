@@ -27,15 +27,14 @@
 # `bot:Building ← eko:hasAssociatedObject ← btwin:KPISet → btwin:hasScenario → btwin:Scenario`.
 #
 # **Output**: JSON-LD graph `results/knowledge_graph/ewi_knowledge_graph.json`, read by the dashboard.
-# If the `NEO4J_URI` and `NEO4J_PASSWORD` environment variables are set (see `.env.example`),
-# the graph is also written to Neo4j.
+# Optionally, the graph is also written to a Neo4j database (`--neo4j yes`): the connection URI,
+# username and password are asked at run time and never stored.
 
 # %% [markdown]
 # ## 0. Set-up
 
 # %%
 import json
-import os
 import sys
 from collections import Counter
 from pathlib import Path
@@ -92,6 +91,7 @@ site = SpatialElement.SetRelationship(spatialElementObject=site, relationshipNam
 # ### 1.2 Buildings and storeys (from the IFC models)
 
 # %%
+# 'Nome' ("Name"): room-code property of the IFC files exported from the Italian-language Revit
 buildings, storeys = [], []
 for building, metadata in config.BUILDINGS.items():
     hierarchy = DataFormat.SpatialHierarchyByIFC(ifcPath=str(ifc_path(building)), siteObject=site, humanReadableUIDs=True,
@@ -103,8 +103,9 @@ for building, metadata in config.BUILDINGS.items():
 # %% [markdown]
 # ### 1.3 Spaces
 #
-# One `bot:Space` per IfcSpace, identified by the room code of the university inventory
-# (`Nome` property) and located in its storey.
+# One `bot:Space` per IfcSpace, identified by the room code of the university inventory and
+# located in its storey. The room code is stored in the `Nome` ("Name") property, as the IFC
+# files were exported from an Italian-language Revit installation.
 
 # %%
 spaces = {}
@@ -266,7 +267,14 @@ Plot.KnowledgeGraphByMatplotlib(
 # ## 5. Neo4j (optional)
 
 # %%
-if os.environ.get('NEO4J_URI') and os.environ.get('NEO4J_PASSWORD'):
-    KnowledgeGraph.ToNEO4J(btwinGraph=graph)
+# Asked interactively unless given on the command line (--neo4j yes|no)
+write_to_neo4j = config.cli_option('neo4j', None)
+if write_to_neo4j is None:
+    try:
+        write_to_neo4j = 'yes' if input('Write the knowledge graph to Neo4j? [y/N] ').strip().lower() in ('y', 'yes') else 'no'
+    except EOFError:  # non-interactive run
+        write_to_neo4j = 'no'
+if write_to_neo4j == 'yes':
+    KnowledgeGraph.ToNEO4J(btwinGraph=graph)  # URI, username and password are asked at run time
 else:
-    print('NEO4J_URI / NEO4J_PASSWORD not set: the graph is not written to Neo4j')
+    print('The knowledge graph is not written to Neo4j')

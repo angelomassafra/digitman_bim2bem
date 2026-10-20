@@ -1899,7 +1899,7 @@ class KPI():
         """
         csvFilePath: hourly EnergyPlus results (ReadVarsESO CSV)
         eioFilePath: EnergyPlus EIO file of the same run
-        ahuElectricalPower: DataFrame with the columns 'zoneUID' and 'kW_Rivisti' (rated AHU power in kW)
+        ahuElectricalPower: DataFrame with the columns 'zone' and 'revised_power_kW' (rated AHU fan power in kW)
         Returns a dictionary with the annual end uses (kWh) and the KPIs.
         """
         import pandas as pd
@@ -1915,9 +1915,9 @@ class KPI():
         operating=(hour>=start)&(hour<end)
         kpis['vent']=0
         for column in df.filter(like='Supply Air Standard Density Volume Flow Rate').columns:
-            match=ahuElectricalPower['zoneUID'].str.lower()==column.split(' ')[0].lower()
+            match=ahuElectricalPower['zone'].str.lower()==column.split(' ')[0].lower()
             if match.any():
-                kpis['vent']+=((df[column]>0)&operating).sum()*ahuElectricalPower.loc[match,'kW_Rivisti'].values[-1]
+                kpis['vent']+=((df[column]>0)&operating).sum()*ahuElectricalPower.loc[match,'revised_power_kW'].values[-1]
         # Occupancy indicators, weighted by the design capacity of the zones
         capacity=KPI.ZoneDesignCapacityByEIO(eioFilePath)
         utilisation=occupancy=weight=0
